@@ -9,7 +9,9 @@ const App = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-start bg-primarypink">
       <Greetings />
-      <WhyILoveYou />
+      <div className="h-full p-5 min-w-screen flex flex-col justify-start">
+        <WhyILoveYou />
+      </div>
       <Footer />
     </div>
   );

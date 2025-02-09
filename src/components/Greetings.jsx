@@ -7,7 +7,7 @@ const Greetings = () => {
   //   const [isTyping, setIsTyping] = useState(true);
 
   useEffect(() => {
-    const phrases = ["Hi Franci", "Ciao amore mio bellissimo", "Ti ametti!"];
+    const phrases = ["Hello, You."];
     let currentPhraseIndex = 0;
     let currentCharIndex = 0;
     let isDeleting = false;
