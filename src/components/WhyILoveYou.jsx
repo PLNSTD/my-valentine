@@ -1,4 +1,5 @@
 import { useState } from "react";
+import cupidIcon from "../assets/images/cupid.png";
 import LoveCard from "./LoveCard";
 import Polaroid from "./Polaroid";
 
@@ -12,9 +13,9 @@ const WhyILoveYou = () => {
     <div className="w-1/4 h-full">
       <p className="font-primary">Why I Love You.</p>
       <div className="relative h-full p-5 border rounded-lg flex flex-col">
-        <div className="absolute inset-0 flex justify-center items-centeropacity-20">
+        <div className="absolute inset-0 flex justify-center items-center opacity-20 z-0">
           <img
-            src="/assets/images/cupid.png"
+            src={cupidIcon}
             alt="cupid image"
             className="w-full h-full object-cover"
           />
