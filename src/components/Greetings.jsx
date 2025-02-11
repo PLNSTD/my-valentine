@@ -7,7 +7,14 @@ const Greetings = () => {
   //   const [isTyping, setIsTyping] = useState(true);
 
   useEffect(() => {
-    const phrases = ["Hello, You."];
+    const phrases = [
+      "Ciao Franci ♡.",
+      "Amotino Mio",
+      "L'amore mio sexy",
+      "Ops..",
+      "L'amore della mia vita.",
+      "P.S. Fai partire spotify",
+    ];
     let currentPhraseIndex = 0;
     let currentCharIndex = 0;
     let isDeleting = false;
@@ -27,7 +34,9 @@ const Greetings = () => {
       // Switch between typing and deleting
       if (!isDeleting && currentCharIndex === currentPhrase.length) {
         // Pause at the end of the phrase
-        setTimeout(() => (isDeleting = true), 1000); // 1-second pause
+        if (currentPhraseIndex == 2)
+          setTimeout(() => (isDeleting = true), 100); // 1-second pause
+        else setTimeout(() => (isDeleting = true), 500);
       } else if (isDeleting && currentCharIndex === 0) {
         // Move to the next phrase
         isDeleting = false;
