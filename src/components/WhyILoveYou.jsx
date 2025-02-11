@@ -39,7 +39,7 @@ const WhyILoveYou = () => {
   return (
     <div className="w-1/4 h-full">
       <p className="font-primary">Let me remind you, why I Love You.</p>
-      <div className="relative h-full p-5 border rounded-lg flex flex-col justify-center items-center gap-4">
+      <div className="relative h-full p-5 border rounded-lg flex flex-col justify-center items-center gap-5">
         <div className="absolute inset-0 flex justify-center items-center opacity-20 z-0">
           <img
             src={cupidIcon}
