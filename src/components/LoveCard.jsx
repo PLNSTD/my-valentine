@@ -1,18 +1,22 @@
 import PropTypes from "prop-types";
 
-const LoveCard = ({ remembrance, onClick }) => {
+const LoveCard = ({ imgUrl, onClick }) => {
   return (
     <div
-      className="remembrance flex flex-row items-center duration-300 ease-in-out hover:scale-150 hover:cursor-pointer z-10"
+      className="w-24 h-28 bg-white shadow-md rounded-md overflow-hidden remembrance flex flex-row justify-center items-center duration-300 ease-in-out hover:scale-130 hover:cursor-pointer z-10"
       onClick={onClick}
     >
-      <p className="w-full flex justify-center">{remembrance}</p>
+      <img
+        src={imgUrl}
+        alt="Memory"
+        className="w-[80%] h-[70%] object-cover rounded-sm mt-2"
+      />
     </div>
   );
 };
 
 LoveCard.propTypes = {
-  remembrance: PropTypes.string,
+  imgUrl: PropTypes.string,
   onClick: PropTypes.func,
 };
 

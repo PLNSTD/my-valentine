@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const Polaroid = ({ cardDescription, closeCard }) => {
+const Polaroid = ({ imgUrl, imgCaption, closeCard }) => {
   return (
     <div className="flex justify-center items-center fixed inset-0 z-50 bg-black/50">
       <div
@@ -15,15 +15,15 @@ const Polaroid = ({ cardDescription, closeCard }) => {
           <span className="text-xl font-bold">×</span>
         </button>
         {/* Photo */}
-        {/* <img
-              src="your-photo-url.jpg" // Replace with your photo URL
-              alt="Polaroid Photo"
-              className="w-full h-64 object-cover"
-            /> */}
-        <div className="bg-black w-full h-64"></div>
+        <img
+          src={imgUrl} // Replace with your photo URL
+          alt="Polaroid Photo"
+          className="w-full h-64 object-cover"
+        />
+        {/* <div className="bg-black w-full h-64"></div> */}
         {/* Whitespace for Caption */}
-        <div className="h-16 flex items-center justify-center">
-          <p className="text-center text-gray-700">{cardDescription}</p>
+        <div className="mt-4 h-16 flex items-center justify-center">
+          <p className="text-center text-gray-700">{imgCaption}</p>
         </div>
       </div>
     </div>
@@ -31,7 +31,8 @@ const Polaroid = ({ cardDescription, closeCard }) => {
 };
 
 Polaroid.propTypes = {
-  cardDescription: PropTypes.string,
+  imgUrl: PropTypes.string,
+  imgCaption: PropTypes.string,
   closeCard: PropTypes.func,
 };
 

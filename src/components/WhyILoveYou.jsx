@@ -11,34 +11,35 @@ import Polaroid from "./Polaroid";
 const remembrances = [
   {
     imgUrl: exhibitImg,
-    imgDescription:
+    imgCaption:
       "Among all the wonders in that museum, you were the most captivating exhibit of all.",
   },
   {
     imgUrl: accomplishmentsImg,
-    imgDescription:
+    imgCaption:
       "You illuminate my accomplishements, no matter how small, and fill me with pride in every little victory.",
   },
   {
     imgUrl: peaceImg,
-    imgDescription:
+    imgCaption:
       "You bring peace into my world, ignite hope within me, and turn every gray into golden sunlight",
   },
   {
     imgUrl: distanceImg,
-    imgDescription:
+    imgCaption:
       "You shaped my mind, empowering me to overcome any distance. With each passing day, I fall deeper in Love",
   },
 ];
 
 const WhyILoveYou = () => {
   const [isCardOpen, setIsCardOpen] = useState(false);
-  const [cardDescription, setCardDescription] = useState(null);
+  const [imgUrl, setImgUrl] = useState(null);
+  const [imgCaption, setImgCaption] = useState(null);
 
   return (
     <div className="w-1/4 h-full">
-      <p className="font-primary">Why I Love You.</p>
-      <div className="relative h-full p-5 border rounded-lg flex flex-col">
+      <p className="font-primary">Let me remind you, why I Love You.</p>
+      <div className="relative h-full p-5 border rounded-lg flex flex-col justify-center items-center gap-4">
         <div className="absolute inset-0 flex justify-center items-center opacity-20 z-0">
           <img
             src={cupidIcon}
@@ -49,17 +50,19 @@ const WhyILoveYou = () => {
         {remembrances.map((remembrance, index) => (
           <LoveCard
             key={index}
-            remembrance={remembrance}
+            imgUrl={remembrance.imgUrl}
             onClick={() => {
               setIsCardOpen((c) => !c);
-              setCardDescription(remembrance);
+              setImgUrl(remembrance.imgUrl);
+              setImgCaption(remembrance.imgCaption);
             }}
           />
         ))}
       </div>
       {isCardOpen && (
         <Polaroid
-          cardDescription={cardDescription}
+          imgUrl={imgUrl}
+          imgCaption={imgCaption}
           closeCard={() => setIsCardOpen((c) => !c)}
         />
       )}
