@@ -1,4 +1,4 @@
-import WhyILoveYou from "./components/whyILoveYou";
+import WhyILoveYou from "./components/WhyILoveYou";
 import Greetings from "./components/Greetings";
 import Footer from "./components/Footer";
 import LoveLetter from "./components/LoveLetter";
