@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const greetingsStyle = "h-full font-primary text-8xl";
+const greetingsStyle = "h-full font-primary text-4xl sm:text-6xl lg:text-8xl";
 
 const Greetings = () => {
   const [text, setText] = useState("Hi Franci");

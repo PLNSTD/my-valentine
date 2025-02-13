@@ -37,14 +37,16 @@ const WhyILoveYou = () => {
   const [imgCaption, setImgCaption] = useState(null);
 
   return (
-    <div className="w-1/4 h-full">
-      <p className="font-primary">Let me remind you, why I Love You.</p>
+    <div className="w-full sm:w-1/4 h-full">
+      <p className="font-primary text-center sm:text-left">
+        Let me remind you, why I Love You.
+      </p>
       <div className="relative h-full p-5 border rounded-lg flex flex-col justify-center items-center gap-5">
         <div className="absolute inset-0 flex justify-center items-center opacity-20 z-0">
           <img
             src={cupidIcon}
             alt="cupid image"
-            className="w-full h-full object-cover"
+            className="w-1/2 sm:w-full h-auto object-cover"
           />
         </div>
         {remembrances.map((remembrance, index) => (
